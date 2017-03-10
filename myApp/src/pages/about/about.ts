@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import {XboxPage} from '../xbox/xbox';
+import {MessagePage} from '../message/message';
 
 @Component({
   selector: 'page-about',
