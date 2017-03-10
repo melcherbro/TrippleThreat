@@ -1,11 +1,16 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="green">
     <ion-title>
-      About
+      XBOX
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+      {{ item.text }}
+      <ion-badge item-right>{{item.notif}}</ion-badge>
+    </button>
+  </ion-list>
 </ion-content>

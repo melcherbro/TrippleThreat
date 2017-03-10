@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import {XboxPage} from '../xbox/xbox';
+import {MessagesPage} from '../messages/messages';
 
 @Component({
   selector: 'page-home',
@@ -91,7 +92,7 @@ export class HomePage {
 
   itemSelected(item){
     item.notif = '';
-    this.navCtrl.push(XboxPage, {
+    this.navCtrl.push(MessagesPage, {
       item: item
     });
   }

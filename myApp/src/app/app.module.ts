@@ -6,6 +6,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { XboxPage } from '../pages/xbox/xbox';
+import { MessagesPage } from  '../pages/messages/messages';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { XboxPage } from '../pages/xbox/xbox';
     ContactPage,
     HomePage,
     TabsPage,
-    XboxPage
+    XboxPage,
+    MessagesPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -26,7 +28,8 @@ import { XboxPage } from '../pages/xbox/xbox';
     ContactPage,
     HomePage,
     TabsPage,
-    XboxPage
+    XboxPage,
+    MessagesPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
