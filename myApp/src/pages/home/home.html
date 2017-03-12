@@ -2,6 +2,11 @@
   <ion-navbar color="dark">
     <ion-title>HOME</ion-title>
   </ion-navbar>
+  <ion-searchbar
+       (ionInput)="searchGamerTags($event)"
+       (ionClear)="clearText()"
+       placeholder="Search">
+  </ion-searchbar>
 </ion-header>
 
 <ion-content>
@@ -9,7 +14,7 @@
     <ion-list-header color="green">
       Xbox
     </ion-list-header>
-    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+    <button ion-item *ngFor="let item of items[0]" (click)="itemSelected(item)">
       {{ item.text }}
       <ion-badge item-right>{{item.notif}}</ion-badge>
     </button>
@@ -18,7 +23,7 @@
     <ion-list-header color="blue">
       PlayStation
     </ion-list-header>
-    <button ion-item *ngFor="let item of psnames" (click)="itemSelected(item)">
+    <button ion-item *ngFor="let item of items[1]" (click)="itemSelected(item)">
       {{item.text}}
     </button>
   </ion-list>
@@ -26,7 +31,7 @@
     <ion-list-header color="purple">
       Steam
     </ion-list-header>
-    <button ion-item *ngFor="let item of steamnames" (click)="itemSelected(item)">
+    <button ion-item *ngFor="let item of items[2]" (click)="itemSelected(item)">
       {{item.text}}
     </button>
   </ion-list>

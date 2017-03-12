@@ -5,14 +5,22 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar color="green">
     <ion-title>XBOX</ion-title>
   </ion-navbar>
-
+  <ion-searchbar
+      (ionInput)="searchGamerTags($event)"
+      (ionClear)="clearText()"
+      placeholder="Search">
+  </ion-searchbar>
 </ion-header>
 
 
 <ion-content>
-
+     <ion-list>
+       <button ion-item *ngFor="let item of items[0]" (click)="itemSelected(item)">
+        {{ item.text }}
+        <ion-badge item-right>{{item.notif}}</ion-badge>
+       </button>
+     </ion-list>
 </ion-content>

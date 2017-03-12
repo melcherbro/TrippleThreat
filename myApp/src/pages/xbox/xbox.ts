@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
+import {HomePage} from '../home/home';
+
 /*
   Generated class for the Xbox page.
 
@@ -11,8 +13,9 @@ import { NavController, NavParams } from 'ionic-angular';
   selector: 'page-xbox',
   templateUrl: 'xbox.html'
 })
-export class XboxPage {
+export class XboxPage extends HomePage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+       super(navCtrl);
   }
 
   ionViewDidLoad() {
